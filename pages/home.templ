@@ -1,0 +1,16 @@
+package pages
+
+import "callisplanics/components"
+templ Page() {
+  @Show()
+}
+
+templ Show() {
+	<h1> Home</h1>
+	<p> This is the home page</p>
+}
+
+
+func Home() *templ.ComponentHandler{
+	return templ.Handler(components.Default(Page()))
+}

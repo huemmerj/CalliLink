@@ -1,0 +1,21 @@
+package components;
+
+import "callisplanics/middleware"
+templ Default(content templ.Component) {
+	if ctx.Value(middleware.IsHxRequest) == "true" {
+	<html>
+	    <head>
+		<title>My Page</title>
+		  <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+	    </head>
+	    <body>
+		<div id="main">
+			@content
+		</div>
+	    	@Footer()
+	    </body>
+	</html>
+	} else {
+		@content
+	}
+}
