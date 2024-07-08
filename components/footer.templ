@@ -2,6 +2,10 @@ package components;
 
 
 templ Footer () {
-	<a hx-get="/" hx-push-url="true" hx-target="#main">Home</a>
-	<a hx-get="/about" hx-push-url="true" hx-target="#main">About</a>
+<div class="text-text1 bg-background fixed flex flex-row justify-center bottom-0 w-full pt-2">
+
+
+	@FooterItem( "About", "/about")
+	@FooterItem( "Home", "/")
+</div>
 }

@@ -1,0 +1,2 @@
+<div class=\"text-text1 bg-background fixed flex flex-row justify-center bottom-0 w-full pt-2\">
+</div>
