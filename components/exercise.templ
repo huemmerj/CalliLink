@@ -17,10 +17,10 @@ templ Exercise(exercise ExerciseType) {
 		<div>{exercise.Name}</div>
 		<div class="flex gap-1">
 			if exercise.Parameters.Time {
-				<i class="fa-solid fa-user"></i>	
+				<span class="material-icons md-48">timer</span>	
 			}
 			if exercise.Parameters.Reps {
-				<div>Reps</div>
+				<span class="material-icons md-48">face</span>
 			}
 			if exercise.Parameters.Weight {
 				<div>Weight</div>

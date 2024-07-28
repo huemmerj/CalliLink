@@ -19,7 +19,6 @@ func main() {
 	// Static serve the dist folder
 	http.Handle("/dist/", http.StripPrefix("/dist/", http.FileServer(http.Dir("dist"))))
 	// start server and log error
-	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 	err := http.ListenAndServe(":8082", nil)
 	if err != nil {
 		fmt.Println(err)
