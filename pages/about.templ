@@ -1,6 +1,6 @@
 package pages;
 
-import "callisplanics/components"
+import "callisplanics/layouts"
 templ about() {
   <div>
     <h1>About</h1>
@@ -12,6 +12,6 @@ templ about() {
 
 
 func About() *templ.ComponentHandler{
-	return templ.Handler(components.Default(about()))
+	return templ.Handler(layouts.Default(about()))
 }
 

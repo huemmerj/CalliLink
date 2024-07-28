@@ -8,6 +8,7 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+import "callisplanics/layouts"
 import "callisplanics/components"
 
 func Page() templ.Component {
@@ -36,6 +37,9 @@ func Page() templ.Component {
 	})
 }
 
+var exerciseParams = components.ExerciseParameters{Time: true, Reps: true, Weight: true}
+var exercise = components.ExerciseType{Id: 10, Name: "Pushup", Parameters: exerciseParams}
+
 func Show() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -58,10 +62,14 @@ func Show() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
+		templ_7745c5c3_Err = components.Exercise(exercise).Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
 		return templ_7745c5c3_Err
 	})
 }
 
 func Home() *templ.ComponentHandler {
-	return templ.Handler(components.Default(Page()))
+	return templ.Handler(layouts.Default(Page()))
 }

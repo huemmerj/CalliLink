@@ -1,16 +1,20 @@
 package pages
 
+import "callisplanics/layouts"
 import "callisplanics/components"
 templ Page() {
   @Show()
 }
 
+var exerciseParams = components.ExerciseParameters{Time: true, Reps: true, Weight: true} 
+var exercise = components.ExerciseType{Id: 10, Name: "Pushup", Parameters: exerciseParams}
 templ Show() {
 	<h1> Home</h1>
 	<p> This is the home page</p>
+	@components.Exercise(exercise)
 }
 
 
 func Home() *templ.ComponentHandler{
-	return templ.Handler(components.Default(Page()))
+	return templ.Handler(layouts.Default(Page()))
 }

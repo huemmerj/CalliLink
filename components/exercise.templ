@@ -1,0 +1,30 @@
+package components;
+
+type ExerciseType struct {
+	Id int
+	Name string
+	Parameters ExerciseParameters
+}
+
+type ExerciseParameters struct {
+	Time bool
+	Reps bool
+	Weight bool
+}
+
+templ Exercise(exercise ExerciseType) {
+	<div class="flex gap-2 justify-between max-w-60">
+		<div>{exercise.Name}</div>
+		<div class="flex gap-1">
+			if exercise.Parameters.Time {
+				<i class="fa-solid fa-user"></i>	
+			}
+			if exercise.Parameters.Reps {
+				<div>Reps</div>
+			}
+			if exercise.Parameters.Weight {
+				<div>Weight</div>
+			}
+		</div>
+	</div>
+}

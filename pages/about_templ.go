@@ -8,7 +8,7 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "callisplanics/components"
+import "callisplanics/layouts"
 
 func about() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -37,5 +37,5 @@ func about() templ.Component {
 }
 
 func About() *templ.ComponentHandler {
-	return templ.Handler(components.Default(about()))
+	return templ.Handler(layouts.Default(about()))
 }
