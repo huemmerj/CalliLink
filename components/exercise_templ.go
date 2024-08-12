@@ -8,19 +8,11 @@ package components
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-type ExerciseType struct {
-	Id         int
-	Name       string
-	Parameters ExerciseParameters
-}
+import (
+	"callisplanics/models"
+)
 
-type ExerciseParameters struct {
-	Time   bool
-	Reps   bool
-	Weight bool
-}
-
-func Exercise(exercise ExerciseType) templ.Component {
+func Exercise(exercise models.Exercise) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
@@ -45,7 +37,7 @@ func Exercise(exercise ExerciseType) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(exercise.Name)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/exercise.templ`, Line: 17, Col: 21}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `components/exercise.templ`, Line: 9, Col: 21}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {

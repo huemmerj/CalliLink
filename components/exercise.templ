@@ -1,29 +1,21 @@
 package components;
 
-type ExerciseType struct {
-	Id int
-	Name string
-	Parameters ExerciseParameters
-}
+import (
+"callisplanics/models"
+)
 
-type ExerciseParameters struct {
-	Time bool
-	Reps bool
-	Weight bool
-}
-
-templ Exercise(exercise ExerciseType) {
-	<div class="flex gap-2 justify-between max-w-60">
+templ Exercise(exercise models.Exercise) {
+	<div class="flex justify-between max-w-60 py-4">
 		<div>{exercise.Name}</div>
-		<div class="flex gap-1">
+		<div class="flex gap-1 text-gray">
 			if exercise.Parameters.Time {
 				<span class="material-icons md-48">timer</span>	
 			}
 			if exercise.Parameters.Reps {
-				<span class="material-icons md-48">face</span>
+				<span class="material-icons md-48">repeat</span>
 			}
 			if exercise.Parameters.Weight {
-				<div>Weight</div>
+				<span class="material-icons md-48">fitness_center</span>
 			}
 		</div>
 	</div>
