@@ -607,15 +607,6 @@ video {
   background-color: rgb(34 36 44 / var(--tw-bg-opacity));
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -636,11 +627,6 @@ video {
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(140 140 140 / var(--tw-text-opacity));
-}
-
-.text-green-900 {
-  --tw-text-opacity: 1;
-  color: rgb(20 83 45 / var(--tw-text-opacity));
 }
 
 .text-text {
