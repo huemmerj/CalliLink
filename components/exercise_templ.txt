@@ -2,5 +2,5 @@
 </div><div class=\"flex gap-1\">
 <span class=\"material-icons md-48\">timer</span> 
 <span class=\"material-icons md-48\">face</span> 
-<div>Weight</div>
+<span class=\"material-icons md-48\">fitness_center</span>
 </div></div>

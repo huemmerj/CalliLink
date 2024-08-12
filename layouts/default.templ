@@ -7,13 +7,15 @@ templ Default(content templ.Component) {
 	<html>
 	    <head>
  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="dist/tailwind.css" rel="stylesheet"></link>
 		<title>My Page</title>
 		<script src="https://unpkg.com/htmx.org@2.0.0"></script>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	    </head>
-	    <body>
+	    <body class="bg-primary text-text">
+	    	test
 		<div id="main">
+			test
 			@content
 		</div>
 	    	@components.Footer()
