@@ -1,0 +1,11 @@
+package pages
+import (
+"callisplanics/layouts"
+)
+
+templ showAddExercise() {
+	<h1>Add Exercise</h1>	
+}
+func AddExerciseHandler() *templ.ComponentHandler{
+	return templ.Handler(layouts.Default(showAddExercise()))
+}

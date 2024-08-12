@@ -8,15 +8,14 @@ import (
 )
 
 
-templ Show(exercises []models.Exercise) {
-	<h1>Home</h1>
-	<p>This is the home page</p>
+templ showExercise(exercises []models.Exercise) {
+	<h1>Exercises</h1>
 	for _, exercise := range exercises {
 		@components.Exercise(exercise)
 	}
 }
 
-func Home() *templ.ComponentHandler {
+func Exercises() *templ.ComponentHandler {
 	exercises := controllers.GetExercisesHandler()
-	return templ.Handler(layouts.Default(Show(exercises)))
+	return templ.Handler(layouts.Default(showExercise(exercises)))
 }

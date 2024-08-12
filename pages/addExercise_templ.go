@@ -9,13 +9,10 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
-	"callisplanics/components"
-	"callisplanics/controllers"
 	"callisplanics/layouts"
-	"callisplanics/models"
 )
 
-func Show(exercises []models.Exercise) templ.Component {
+func showAddExercise() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
@@ -37,17 +34,10 @@ func Show(exercises []models.Exercise) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		for _, exercise := range exercises {
-			templ_7745c5c3_Err = components.Exercise(exercise).Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-		}
 		return templ_7745c5c3_Err
 	})
 }
 
-func Home() *templ.ComponentHandler {
-	exercises := controllers.GetExercisesHandler()
-	return templ.Handler(layouts.Default(Show(exercises)))
+func AddExerciseHandler() *templ.ComponentHandler {
+	return templ.Handler(layouts.Default(showAddExercise()))
 }

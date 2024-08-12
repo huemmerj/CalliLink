@@ -1,0 +1,1 @@
+<span class=\"material-icons text-ok text-8xl\" style=\"font-size: 64px;\">add_circle</span>

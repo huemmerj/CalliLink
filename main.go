@@ -21,9 +21,11 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 	db.InitMongoDB()
-	http.Handle("/", middleware.Layout(pages.Home()))
+	http.Handle("/", middleware.Layout(pages.Exercises()))
 
 	http.Handle("/about", middleware.Layout(pages.About()))
+
+	http.Handle("/addExercise", middleware.Layout(pages.AddExerciseHandler()))
 	// Static serve the dist folder
 	http.Handle("/dist/", http.StripPrefix("/dist/", http.FileServer(http.Dir("dist"))))
 	// start server and log error
