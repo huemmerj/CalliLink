@@ -1,6 +1,6 @@
-<div class=\"flex gap-2 justify-between max-w-60\"><div>
-</div><div class=\"flex gap-1\">
+<div class=\"flex justify-between max-w-60 py-4\"><div>
+</div><div class=\"flex gap-1 text-gray\">
 <span class=\"material-icons md-48\">timer</span> 
-<span class=\"material-icons md-48\">face</span> 
+<span class=\"material-icons md-48\">repeat</span> 
 <span class=\"material-icons md-48\">fitness_center</span>
 </div></div>
