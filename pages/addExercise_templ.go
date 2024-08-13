@@ -35,11 +35,15 @@ func showAddExercise() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.ParameterSetting("Hallo", "test").Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.ParameterSetting("time", "time").Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.ParameterSetting("Reps", "reps").Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.ParameterSetting("reps", "reps").Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = components.ParameterSetting("weight", "weight").Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

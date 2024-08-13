@@ -1,9 +1,10 @@
 package models
 
 type Exercise struct {
-	Id         string             `bson:"_id,omitempty"`
-	Name       string             `bson:"name"`
-	Parameters ExerciseParameters `bson:"parameters"`
+	Id          string             `bson:"_id,omitempty"`
+	Name        string             `bson:"name"`
+	Description string             `bson:"description"`
+	Parameters  ExerciseParameters `bson:"parameters"`
 }
 
 type ExerciseParameters struct {
